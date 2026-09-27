@@ -352,9 +352,9 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
 </section>
 
 <!-- EXAMPLE -->
-<!-- TODO ФОТО 2/3: пример готового караоке (скрин ролика из бота или ты с микрофоном).
-     Кинь файл: assets/img/example-poster.jpg (1080x1350, вертикаль).
-     Это главный слот под твой пример. -->
+<!-- TODO ГИФКА: пример готового караоке (кусок ролика из бота).
+     Кинь файл: assets/img/example.gif (вертикаль, любой размер).
+     Это главный слот под твой пример. Без файла стоит статичная заглушка. -->
 <section class="section" id="example" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow reveal">Живой пример</p>
@@ -362,7 +362,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
     <p class="reveal lead" style="--i:2">Подсветка идёт по словам, волна качается в бит. Сюда встанет твой скрин.</p>
     <div class="example-grid">
       <figure class="poster reveal" style="--i:2">
-        <img src="assets/img/example-poster.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/karaoke-video-neon/1080/1350'" alt="Пример караоке видео, собранного ботом" loading="lazy">
+        <img id="exampleGif" src="assets/img/example.gif" data-static="https://picsum.photos/seed/karaoke-video-neon/1080/1350" onerror="this.onerror=null;this.src='https://picsum.photos/seed/karaoke-video-neon/1080/1350'" alt="Пример караоке видео, собранного ботом" loading="lazy">
         <div class="poster-scrim"></div>
         <figcaption class="poster-chip">я <b>не могу жить</b> без тебя</figcaption>
       </figure>
@@ -455,6 +455,10 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
     });
   }
   paint("line1", L1, 0); paint("line2", L2, L1.length + 1);
+
+  /* GIF в примере: при reduced-motion показываем статичный кадр */
+  var exGif = document.getElementById("exampleGif");
+  if (exGif && reduce) { exGif.src = exGif.getAttribute("data-static"); }
 
   /* wave: 34 bars, transform scaleY only, CSS driven */
   var wave = document.getElementById("wave");
