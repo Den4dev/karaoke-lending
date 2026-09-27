@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>EASY KARAOKE: видео из любого трека</title>
-<meta name="description" content="Пришли аудио в Telegram. Бот подсветит слова в такт и соберёт вертикальный ролик для сторис.">
+<meta name="description" content="Пришли аудио в Telegram. Бот подсветит слова в такт и соберёт ролик в любом формате.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -70,12 +70,12 @@ h1 .hl{color:var(--purple)}
 
 /* phone: live mini version of bot output */
 .hero-visual{display:flex;justify-content:center}
-.phone{width:min(300px,100%);background:#120f1e;border:1px solid rgba(255,255,255,.12);border-radius:30px;overflow:hidden;position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 30px 80px rgba(0,0,0,.55);will-change:transform}
+.phone{width:min(340px,100%);background:#120f1e;border:1px solid rgba(255,255,255,.12);border-radius:30px;overflow:hidden;position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 30px 80px rgba(0,0,0,.55);will-change:transform}
 .phone-top{display:flex;align-items:center;gap:8px;padding:14px 18px 0;font-size:.7rem;color:var(--muted);font-weight:600}
 .live-dot{width:7px;height:7px;border-radius:50%;background:var(--pink);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.lyrics{padding:60px 24px 8px;min-height:220px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.lyric-line{font-family:"Unbounded",sans-serif;font-weight:700;font-size:1.3rem;line-height:1.5}
+.lyrics{padding:48px 20px 8px;min-height:248px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.lyric-line{font-family:"Unbounded",sans-serif;font-weight:700;font-size:1.5rem;line-height:1.5}
 .lyric-line .w{opacity:.3;animation:sing 9s var(--ease-out) infinite;animation-delay:calc(var(--d)*.5s)}
 @keyframes sing{0%{opacity:.3;transform:translateY(3px)}6%{opacity:1;color:var(--pink);transform:none}40%{opacity:1;color:var(--text)}52%,100%{opacity:.3;transform:none}}
 .wave{display:flex;align-items:flex-end;gap:3px;height:64px;padding:0 26px}
@@ -266,7 +266,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
     <div>
       <p class="eyebrow enter">Караоке видео из любого трека</p>
       <h1 class="enter" style="--i:1">Пришли трек,<br>забери <span class="hl">караоке клип</span></h1>
-      <p class="sub enter" style="--i:2">Бот подсветит слова в такт песне и соберёт вертикальный ролик для сторис. Без монтажа.</p>
+      <p class="sub enter" style="--i:2">Бот подсветит слова в такт песне и соберёт ролик в любом формате. Без монтажа.</p>
       <div class="cta-row enter" style="--i:3">
         <a class="btn btn-primary btn-lg magnetic" href="https://t.me/EASYkaraokeBOT">Начать в Telegram</a>
       </div>
@@ -274,7 +274,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
       <dl class="hero-stats enter" style="--i:5">
         <div><dt>длина файла</dt><dd>до 5 мин</dd></div>
         <div><dt>вес файла</dt><dd>до 20 МБ</dd></div>
-        <div><dt>формат</dt><dd>9:16</dd></div>
+        <div><dt>формат</dt><dd>любой</dd></div>
       </dl>
     </div>
     <div class="hero-visual enter" style="--i:2" id="tiltPhone">
@@ -286,7 +286,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
         </div>
         <div class="wave" id="wave" aria-hidden="true"></div>
         <div class="pbar" aria-hidden="true"><i></i></div>
-        <p class="phone-tag">1080×1920 · для reels и сторис</p>
+        <p class="phone-tag">любой формат · reels, сторис, посты</p>
         <div class="phone-float">слова в такт <b>± слово</b></div>
       </div>
     </div>
@@ -344,8 +344,8 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
       </li>
       <li class="reveal" style="--i:3">
         <span class="step-n">03</span>
-        <div><h3>Забери видео</h3><p>Вертикаль с подсветкой строк и волной звука. Сразу постится в сторис.</p></div>
-        <span class="step-tag">9:16</span>
+        <div><h3>Забери видео</h3><p>Ролик с подсветкой строк и волной звука. Сразу постится куда угодно.</p></div>
+        <span class="step-tag">ЛЮБОЙ</span>
       </li>
     </ol>
   </div>
@@ -373,7 +373,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
         </div>
         <ul class="spec-rows reveal" style="--i:4">
           <li><span>Хронометраж</span><span>до 5:00</span></li>
-          <li><span>Кадр</span><span>1080×1920</span></li>
+          <li><span>Формат</span><span>любой</span></li>
           <li><span>Звук</span><span>вокал + минус</span></li>
           <li><span>Файл</span><span>до 20 МБ</span></li>
         </ul>
@@ -444,8 +444,8 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
   var fine = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
   /* lyrics: two lines, words light up in sequence, 9s loop */
-  var L1 = ["я", "не", "могу", "жить"];
-  var L2 = ["без", "тебя,", "слышишь"];
+  var L1 = ["я", "так", "привыкла", "жить"];
+  var L2 = ["одним", "тобой", "одним", "тобой"];
   function paint(id, words, offset) {
     var p = document.getElementById(id);
     words.forEach(function (w, i) {
