@@ -102,9 +102,6 @@ h1 .hl{color:var(--purple)}
 @keyframes psync{0%{transform:scaleX(0)}88%{transform:scaleX(1)}100%{transform:scaleX(1)}}
 @keyframes pthumb{0%{left:0}88%{left:100%}100%{left:100%}}
 .phone-tag{text-align:center;font-size:.68rem;color:rgba(255,255,255,.55);letter-spacing:.03em;padding:14px 0 30px;font-variant-numeric:tabular-nums;flex:none;z-index:1;position:relative}
-.accuracy-chip{position:absolute;top:16px;right:-6px;z-index:2;background:var(--surface-2);border:1px solid var(--line);border-radius:14px;padding:12px 18px;font-size:.78rem;font-weight:700;color:var(--muted);box-shadow:0 16px 40px rgba(0,0,0,.5);transform:rotate(3deg);animation:chipfloat 4s ease-in-out infinite;white-space:nowrap}
-.accuracy-chip b{color:var(--pink)}
-@keyframes chipfloat{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-6px)}}
 .note{position:absolute;font-size:2.2rem;color:var(--purple);opacity:.9;pointer-events:none;animation:notefloat 5s ease-in-out infinite;text-shadow:0 0 16px rgba(139,42,226,.6)}
 .note-a{top:4%;right:-10%;animation-delay:.2s}
 .note-b{bottom:16%;left:-11%;color:var(--pink);font-size:2.6rem;animation-delay:1.6s;text-shadow:0 0 16px rgba(255,61,138,.6)}
@@ -264,7 +261,6 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
   .v-stamp{top:-14px;right:12px}
   .klip-row{gap:10px}
   .eq-pulse,.eq-bars{display:none}
-  .accuracy-chip{right:2px;top:-16px;font-size:.66rem;padding:8px 12px}
   .note{font-size:1.4rem}
 }
 @media (prefers-reduced-motion:reduce){
@@ -275,6 +271,7 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
   .ticker-track{animation:none;flex-wrap:wrap;width:auto}
   .progress{display:none}
 }
+.cta-row .btn-lg{padding-left:54px;padding-right:54px}
 </style>
 </head>
 <body>
@@ -339,7 +336,6 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
       <span class="glow-dot" aria-hidden="true"></span>
       <div class="phone-glow" aria-hidden="true"></div>
       <div class="phone" role="img" aria-label="Экран телефона: бот подсвечивает слова песни в такт">
-        <div class="accuracy-chip">Точность <b>+1 слово</b></div>
         <span class="power-btn" aria-hidden="true"></span>
         <div class="camera-dot" aria-hidden="true"></div>
         <div class="phone-sheen" aria-hidden="true"></div>
@@ -394,21 +390,21 @@ footer{padding:0 0 44px;text-align:center;color:var(--muted);font-size:.82rem}
   <div class="wrap">
     <h2 class="reveal">От голосового до ролика за три шага</h2>
     <p class="reveal lead" style="--i:1">Ничего ставить не нужно. Весь монтаж живёт внутри чата.</p>
-    <ol class="steps">
+        <ol class="steps">
       <li class="reveal" style="--i:1">
         <span class="step-n">01</span>
-        <div><h3>Отправь трек</h3><p>Аудио или видео до 5 минут и 20 МБ. Бот примет файл прямо в чате.</p></div>
-        <span class="step-tag">В ЧАТЕ</span>
+        <div><h3>Загрузи песню</h3><p>Отправь боту трек или видео. Подойдёт MP3, WAV, MP4 и другие популярные форматы.</p></div>
+        <span class="step-tag">ТЫ ОТПРАВЛЯЕШЬ ТРЕК</span>
       </li>
       <li class="reveal" style="--i:2">
         <span class="step-n">02</span>
-        <div><h3>Бот раскладывает песню</h3><p>Вокал отдельно, инструментал отдельно, текст синхронно до слова.</p></div>
-        <span class="step-tag">АНАЛИЗ</span>
+        <div><h3>Получи готовое караоке</h3><p>Бот уберёт вокал, оставит чистый инструментал и автоматически синхронизирует текст с музыкой.</p></div>
+        <span class="step-tag">БОТ ДЕЛАЕТ КАРАОКЕ</span>
       </li>
       <li class="reveal" style="--i:3">
         <span class="step-n">03</span>
-        <div><h3>Забери видео</h3><p>Ролик с подсветкой строк и волной звука. Сразу постится куда угодно.</p></div>
-        <span class="step-tag">ЛЮБОЙ</span>
+        <div><h3>Забери и пой 🎤</h3><p>Получишь готовое караоке-видео с текстом, подсветкой слов и визуализацией звука. Можно сразу включать и петь.</p></div>
+        <span class="step-tag">ГОТОВО К ПЕНИЮ</span>
       </li>
     </ol>
   </div>
